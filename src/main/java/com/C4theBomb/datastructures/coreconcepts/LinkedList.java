@@ -1,4 +1,4 @@
-package datastructures.coreconcepts;
+package com.C4theBomb.datastructures.coreconcepts;
 
 public class LinkedList {
     Node head;

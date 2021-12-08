@@ -1,4 +1,4 @@
-package datastructures.arraysandstrings;
+package com.C4theBomb.datastructures.arraysandstrings;
 
 public class CheckPalindromePermutation {
     static boolean checkPalidrome(String str, int charSetSize) {
@@ -16,9 +16,5 @@ public class CheckPalindromePermutation {
 
         return (differences > 1) ? false : true;
 
-    }
-
-    public static void main(String[] args) {
-        
     }
 }

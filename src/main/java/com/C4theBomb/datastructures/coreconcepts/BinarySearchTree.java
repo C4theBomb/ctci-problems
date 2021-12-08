@@ -1,4 +1,4 @@
-package datastructures.coreconcepts;
+package com.C4theBomb.datastructures.coreconcepts;
 
 import java.util.ArrayList;
 

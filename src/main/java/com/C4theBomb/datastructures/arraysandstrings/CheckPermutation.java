@@ -1,7 +1,7 @@
+package com.C4theBomb.datastructures.arraysandstrings;
 /*
 Given two strings, write a method to decide if one is a permutation of the other.
 */
-package datastructures.arraysandstrings;
 
 import java.util.Arrays;
 

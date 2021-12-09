@@ -1,0 +1,56 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch CheckPermutation",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.arraysandstrings.CheckPermutation",
+            "projectName": "ctci-problems"
+        },
+        {
+            "type": "java",
+            "name": "Launch IsUnique",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.arraysandstrings.IsUnique",
+            "projectName": "ctci-problems"
+        },
+        {
+            "type": "java",
+            "name": "Launch URLify",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.arraysandstrings.URLify",
+            "projectName": "ctci-problems"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinarySearchTree",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.coreconcepts.BinarySearchTree",
+            "projectName": "ctci-problems"
+        },
+        {
+            "type": "java",
+            "name": "Launch BinaryTree",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.coreconcepts.BinaryTree",
+            "projectName": "ctci-problems"
+        },
+        {
+            "type": "java",
+            "name": "Launch LinkedList",
+            "request": "launch",
+            "mainClass": "com.C4theBomb.datastructures.coreconcepts.LinkedList",
+            "projectName": "ctci-problems"
+        }
+    ]
+}

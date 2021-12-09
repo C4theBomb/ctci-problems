@@ -4,7 +4,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
-@DisplayName("Test cases for CheckPermutation module")
 public class CheckPermutationTest {
     @Test
     @DisplayName("CheckPermutation1 ('abcdefg', 'gefdcba') - true")

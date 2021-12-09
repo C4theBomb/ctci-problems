@@ -39,9 +39,4 @@ public class URLify {
 
         return new String(url);
     }
-
-    public static void main(String[] args) {
-        String testString = "or ange";
-        System.out.println(urlify(testString));
-    }
 }

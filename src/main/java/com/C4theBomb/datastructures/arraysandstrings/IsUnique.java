@@ -21,8 +21,4 @@ public class IsUnique {
 
         return true;
     }
-
-    public static void main(String[] args) {
-        System.out.println(dataStructures("asdf<>", 256));
-    }
 }

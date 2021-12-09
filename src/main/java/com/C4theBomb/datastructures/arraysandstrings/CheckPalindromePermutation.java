@@ -22,6 +22,5 @@ public class CheckPalindromePermutation {
         }
 
         return (differences > 1) ? false : true;
-
     }
 }

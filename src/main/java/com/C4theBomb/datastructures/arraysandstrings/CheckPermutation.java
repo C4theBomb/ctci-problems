@@ -32,9 +32,4 @@ public class CheckPermutation {
 
         return true;
     }
-
-    public static void main(String[] args) {
-        System.out.println(checkPermutation1("string", "strgin"));
-        System.out.println(checkPermutation2("string", "strgin"));
-    }
 }

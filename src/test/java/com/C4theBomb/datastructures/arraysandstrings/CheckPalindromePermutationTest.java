@@ -2,7 +2,7 @@ package com.C4theBomb.datastructures.arraysandstrings;
 
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.DisplayName;;
+import org.junit.jupiter.api.DisplayName;
 
 public class CheckPalindromePermutationTest {
     @Test

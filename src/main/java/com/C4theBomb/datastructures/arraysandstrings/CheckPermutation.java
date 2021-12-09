@@ -18,6 +18,7 @@ public class CheckPermutation {
         return sort(string1).equals(sort(string2));
     }
 
+    // Space complexity: O(n) Time complexity: O(n)
     static boolean checkPermutation2(String string1, String string2) {
         if (string1.length() != string2.length()) return false;
         int[] charSet = new int[128];
@@ -25,8 +26,8 @@ public class CheckPermutation {
             charSet[string1.charAt(i)]++;
         }
         for (int i = 0; i < string2.length(); i++) {
-            charSet[string1.charAt(i)]--;
-            if (charSet[string1.charAt(i)] < 0) return false;
+            charSet[string2.charAt(i)]--;
+            if (charSet[string2.charAt(i)] < 0) return false;
         }
 
         return true;

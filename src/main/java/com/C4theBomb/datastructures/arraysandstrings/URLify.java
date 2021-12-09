@@ -6,25 +6,42 @@ You may assume that the string has suffcient space at the end to hold the additi
 */
 
 public class URLify {
-    static String urlify(char[] string, int trueLength) {
+    static int countChars(char[] string, char search) {
+        int count = 0;
+        for (char c : string) {
+            if (c == ' ') {
+                count++;
+            } 
+        }
+
+        return count;
+    }
+
+    static String urlify(String string) {
+        if (string.length() == 0) return "";
+
+        char[] stringArray = string.toCharArray();
+        int trueLength = countChars(stringArray, ' ') * 2 + stringArray.length;
         char[] url = new char[trueLength];
+
         int newArrayIndex = 0;
-        for (int oldArrayIndex = 0; oldArrayIndex < string.length; oldArrayIndex++) {
-            if (string[oldArrayIndex] == ' ') {
+        for (int oldArrayIndex = 0; oldArrayIndex < stringArray.length; oldArrayIndex++) {
+            if (stringArray[oldArrayIndex] == ' ') {
                 url[newArrayIndex] = '%';
                 url[newArrayIndex + 1] = '2';
                 url[newArrayIndex + 2] = '0';
                 newArrayIndex += 3;
             } else {
-                url[newArrayIndex] = string[oldArrayIndex];
+                url[newArrayIndex] = stringArray[oldArrayIndex];
                 newArrayIndex++;
             }
         }
 
         return new String(url);
     }
+
     public static void main(String[] args) {
-        char[] testString = "or ange".toCharArray();
-        System.out.println(urlify(testString, 12));
+        String testString = "or ange";
+        System.out.println(urlify(testString));
     }
 }

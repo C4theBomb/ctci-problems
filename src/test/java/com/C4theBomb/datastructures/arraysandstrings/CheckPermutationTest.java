@@ -7,25 +7,25 @@ import org.junit.jupiter.api.DisplayName;
 @DisplayName("Test cases for CheckPermutation module")
 public class CheckPermutationTest {
     @Test
-    @DisplayName("trueCheckPermutation1 - (abcdefg, gefdcba)")
+    @DisplayName("CheckPermutation1 ('abcdefg', 'gefdcba') - true")
     void trueCheckPermutation1() {
         assertTrue(CheckPermutation.checkPermutation1("abcdefg", "gefdcba"));
     }
 
     @Test
-    @DisplayName("falseCheckPermutation1 - (asdf, akdm)")
+    @DisplayName("CheckPermutation1 ('asdf', 'akdm') - false")
     void falseCheckPermutation1() {
         assertFalse(CheckPermutation.checkPermutation1("asdf", "akdm"));
     }
 
     @Test
-    @DisplayName("trueCheckPermutation2 - (abcdefg, gefcba)")
+    @DisplayName("CheckPermutation2 ('abcdefg', 'gefcba') - true")
     void trueCheckPermutation2() {
         assertTrue(CheckPermutation.checkPermutation2("abcdefg", "gefdcba"));
     }
 
     @Test
-    @DisplayName("falseCheckPermutation2 - (asdf, akdm)")
+    @DisplayName("CheckPermutation2 ('asdf', 'akdm') - false")
     void falseCheckPermutation2() {
         assertFalse(CheckPermutation.checkPermutation2("asdf", "akdm"));
     }

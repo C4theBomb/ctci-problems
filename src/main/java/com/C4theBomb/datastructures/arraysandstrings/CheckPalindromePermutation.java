@@ -1,8 +1,8 @@
 package com.C4theBomb.datastructures.arraysandstrings;
 
 public class CheckPalindromePermutation {
-    static boolean checkPalidrome(String str, int charSetSize) {
-        int[] charCounts = new int[charSetSize];
+    static boolean checkPalindromePermutation(String str) {
+        int[] charCounts = new int[256];
         int differences = 0;
         for (int i = 0; i < str.length(); i++) {
             charCounts[str.charAt(i)]++;

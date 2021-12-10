@@ -30,6 +30,12 @@ public class OneAwayTest {
     }
 
     @Test
+    @DisplayName("oneAway ('', '') - true")
+    void emptyOneAway() {
+        assertTrue(OneAway.oneAway("", ""));
+    }
+
+    @Test
     @DisplayName("oneAway ('pale', 'bake') - false")
     void falseOneAway() {
         assertFalse(OneAway.oneAway("pale", "bake"));

@@ -18,6 +18,12 @@ public class CheckPermutationTest {
     }
 
     @Test
+    @DisplayName("CheckPermutation1 ('', '') - true")
+    void emptyCheckPermutation1() {
+        assertTrue(CheckPermutation.checkPermutation1("", ""));
+    }
+
+    @Test
     @DisplayName("CheckPermutation2 ('abcdefg', 'gefcba') - true")
     void trueCheckPermutation2() {
         assertTrue(CheckPermutation.checkPermutation2("abcdefg", "gefdcba"));
@@ -27,5 +33,11 @@ public class CheckPermutationTest {
     @DisplayName("CheckPermutation2 ('asdf', 'akdm') - false")
     void falseCheckPermutation2() {
         assertFalse(CheckPermutation.checkPermutation2("asdf", "akdm"));
+    }
+
+    @Test
+    @DisplayName("CheckPermutation2 ('', '') - true")
+    void emptyCheckPermutation2() {
+        assertTrue(CheckPermutation.checkPermutation2("", ""));
     }
 }

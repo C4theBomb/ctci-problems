@@ -16,4 +16,10 @@ public class StringCompressionTest {
     void sameLengthStringCompression() {
         assertEquals("aabbccdd", StringCompression.compressString("aabbccdd"));
     }
+
+    @Test
+    @DisplayName("compressString ('') - ''")
+    void emptyStringCompression() {
+        assertEquals("", StringCompression.compressString(""));
+    }
 }

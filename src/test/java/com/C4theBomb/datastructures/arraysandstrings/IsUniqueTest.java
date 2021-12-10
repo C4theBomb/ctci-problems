@@ -6,14 +6,20 @@ import org.junit.jupiter.api.DisplayName;
 
 public class IsUniqueTest {
     @Test
-    @DisplayName("IsUnique ('abcdefghijklmnopqrstuvwxyz ') - Expected Output: true")
+    @DisplayName("IsUnique ('abcdefghijklmnopqrstuvwxyz ') - true")
     void trueIsUnique() {
-        assertTrue(IsUnique.dataStructures("abcdefghijklmnopqrstuvwxyz ", 256));        
+        assertTrue(IsUnique.isUnique("abcdefghijklmnopqrstuvwxyz ", 256));        
     }
 
     @Test
-    @DisplayName("False ('abc abc') - Expected Output: false")
+    @DisplayName("IsUnique ('abc abc') - false")
     void falseIsUnique() {
-        assertFalse(IsUnique.dataStructures("abc abc", 256));
+        assertFalse(IsUnique.isUnique("abc abc", 256));
+    }
+
+    @Test
+    @DisplayName("IsUnique ('') - true")
+    void emptyIsUnique() {
+        assertTrue(IsUnique.isUnique("", 256));
     }
 }

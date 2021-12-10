@@ -6,37 +6,37 @@ import org.junit.jupiter.api.DisplayName;
 
 public class CheckPermutationTest {
     @Test
-    @DisplayName("CheckPermutation1 ('abcdefg', 'gefdcba') - true")
+    @DisplayName("CheckPermutation1 - True input")
     void trueCheckPermutation1() {
         assertTrue(CheckPermutation.checkPermutation1("abcdefg", "gefdcba"));
     }
 
     @Test
-    @DisplayName("CheckPermutation1 ('asdf', 'akdm') - false")
+    @DisplayName("CheckPermutation1 - False input")
     void falseCheckPermutation1() {
         assertFalse(CheckPermutation.checkPermutation1("asdf", "akdm"));
     }
 
     @Test
-    @DisplayName("CheckPermutation1 ('', '') - true")
+    @DisplayName("CheckPermutation1 - Input with empty strings")
     void emptyCheckPermutation1() {
         assertTrue(CheckPermutation.checkPermutation1("", ""));
     }
 
     @Test
-    @DisplayName("CheckPermutation2 ('abcdefg', 'gefcba') - true")
+    @DisplayName("CheckPermutation2 - True input")
     void trueCheckPermutation2() {
         assertTrue(CheckPermutation.checkPermutation2("abcdefg", "gefdcba"));
     }
 
     @Test
-    @DisplayName("CheckPermutation2 ('asdf', 'akdm') - false")
+    @DisplayName("CheckPermutation2 - False input")
     void falseCheckPermutation2() {
         assertFalse(CheckPermutation.checkPermutation2("asdf", "akdm"));
     }
 
     @Test
-    @DisplayName("CheckPermutation2 ('', '') - true")
+    @DisplayName("CheckPermutation2 - Input with empty string")
     void emptyCheckPermutation2() {
         assertTrue(CheckPermutation.checkPermutation2("", ""));
     }

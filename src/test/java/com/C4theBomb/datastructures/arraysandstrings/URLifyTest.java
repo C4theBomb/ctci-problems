@@ -8,13 +8,13 @@ public class URLifyTest {
     String string = "testing testing 123";
 
     @Test
-    @DisplayName("urlify ('testing testing 123') - Expected Output: 'testing%20testing%20123'")
+    @DisplayName("urlify - Normal Input")
     void passUrlify() {
         assertEquals("testing%20testing%20123", URLify.urlify(this.string));
     }
     
     @Test
-    @DisplayName("urlify ('') - Expected Output: ''")
+    @DisplayName("urlify - Empty string input")
     void emptyInputUrlify() {
         assertEquals("", URLify.urlify(""));
     }

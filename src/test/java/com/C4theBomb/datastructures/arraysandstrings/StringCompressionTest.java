@@ -6,19 +6,19 @@ import org.junit.jupiter.api.DisplayName;
 
 public class StringCompressionTest {
     @Test
-    @DisplayName("compressString ('aabcccccaaa') - 'a2bc5a3'")
+    @DisplayName("compressString - Normal input")
     void passStringCompression() {
         assertEquals("a2bc5a3", StringCompression.compressString("aabcccccaaa"));
     }
 
     @Test
-    @DisplayName("compressString ('aabbccdd') - 'aabbccdd'")
+    @DisplayName("compressString - Same length input")
     void sameLengthStringCompression() {
         assertEquals("aabbccdd", StringCompression.compressString("aabbccdd"));
     }
 
     @Test
-    @DisplayName("compressString ('') - ''")
+    @DisplayName("compressString - Empty string input")
     void emptyStringCompression() {
         assertEquals("", StringCompression.compressString(""));
     }

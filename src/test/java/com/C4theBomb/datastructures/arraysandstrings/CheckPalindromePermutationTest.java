@@ -6,19 +6,19 @@ import org.junit.jupiter.api.DisplayName;
 
 public class CheckPalindromePermutationTest {
     @Test
-    @DisplayName("CheckPalindromePermutation ('mmada') - true")
+    @DisplayName("CheckPalindromePermutation - True input")
     void trueCheckPalindromePermutation() {
         assertTrue(CheckPalindromePermutation.checkPalindromePermutation("mmada"));
     }
 
     @Test
-    @DisplayName("CheckPalindromePermutation ('ajdfsad') - false")
+    @DisplayName("CheckPalindromePermutation - False input")
     void falseCheckPalindromePermutation() {
         assertFalse(CheckPalindromePermutation.checkPalindromePermutation("ajdfsad"));
     }
 
     @Test
-    @DisplayName("CheckPalindromePermutation ('') - true")
+    @DisplayName("CheckPalindromePermutation - Empty string input")
     void emptyCheckPalindromePermutation() {
         assertTrue(CheckPalindromePermutation.checkPalindromePermutation(""));
     }

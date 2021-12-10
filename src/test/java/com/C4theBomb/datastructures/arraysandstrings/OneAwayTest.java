@@ -24,25 +24,25 @@ public class OneAwayTest {
     }
 
     @Test
-    @DisplayName("oneAway ('pale', 'pale') - true")
+    @DisplayName("oneAway - True input")
     void trueOneAwaySame() {
         assertTrue(OneAway.oneAway("pale", "pale"));
     }
 
     @Test
-    @DisplayName("oneAway ('', '') - true")
+    @DisplayName("oneAway - Empty string input")
     void emptyOneAway() {
         assertTrue(OneAway.oneAway("", ""));
     }
 
     @Test
-    @DisplayName("oneAway ('pale', 'bake') - false")
+    @DisplayName("oneAway - False input")
     void falseOneAway() {
         assertFalse(OneAway.oneAway("pale", "bake"));
     }
 
     @Test
-    @DisplayName("oneAway ('pale', 'bakegreen') - false")
+    @DisplayName("oneAway - False input with longer string")
     void falseOneAwayLong() {
         assertFalse(OneAway.oneAway("pale", "bakegreen"));
     }

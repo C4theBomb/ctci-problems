@@ -7,10 +7,11 @@ If the compressed string would not become smaller than the original string, your
 You can assume the string has only uppercase and lowercase characters.
 */
 
+import java.lang.StringBuilder;
+
 public class StringCompression {
     static String compressString(String str) {
-        int currentIndex = 0;
-        char[] strArray = new char[str.length()];
+        StringBuilder compressed = new StringBuilder();
 
         for (int i = 0; i < str.length(); i++) {
             // Get the number of indentical characters by iterating through the string
@@ -20,20 +21,18 @@ public class StringCompression {
             }
 
             // Add the character to the strArray and move index forward
-            strArray[currentIndex] = str.charAt(i);
-            currentIndex++;
+            compressed.append(str.charAt(i));
 
             // Add the count (if any) and move index forward again
             if (count > 1) {
-                strArray[currentIndex] = (char) (count + '0');
-                currentIndex++;
+                compressed.append(count);
             }
 
             // Increase i by the amount of characters compressed
             i += count - 1;
         }
 
-        String newStr = new String(strArray).trim();
+        String newStr = compressed.toString();
         return (newStr.length() < str.length()) ? newStr : str;
     }
 }

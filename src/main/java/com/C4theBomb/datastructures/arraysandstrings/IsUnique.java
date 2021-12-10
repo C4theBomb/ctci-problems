@@ -5,7 +5,7 @@ Implement an algorithm to determine if a string has all unique characters. What 
 
 public class IsUnique {
     // Space complexity: O(n); Time complexity: O(n)
-    static boolean dataStructures(String string, int charSetSize) {
+    static boolean isUnique(String string, int charSetSize) {
         boolean[] charSet = new boolean[charSetSize];
         if (string.length() > charSetSize) {
             return false;

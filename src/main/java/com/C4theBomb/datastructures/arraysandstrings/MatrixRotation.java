@@ -7,7 +7,7 @@ public class MatrixRotation {
         int maxLength = matrix.length - 1;
         int numbersInInner = matrix.length;
 
-        for (int d = 0; d < Math.ceil((m + 1)/ 2); d++) {
+        for (int d = 0; d < Math.ceil((maxLength + 1)/ 2); d++) {
             for (int i = 0; i < numbersInInner - 1; i++) {
                 // Stores top into variable tmp
                 int tmp = matrix[maxLength - (maxLength - d)][maxLength - (maxLength - (d + i))];

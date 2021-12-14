@@ -8,7 +8,7 @@ import com.C4theBomb.datastructures.linkedlists.RemoveDups.LinkedList;
 
 public class RemoveDupsTest {
 
-    boolean assertLinkedListEquals(LinkedList.Node head1, LinkedList.Node head2) {
+    void assertLinkedListEquals(LinkedList.Node head1, LinkedList.Node head2) {
         LinkedList.Node current1 = head1;
         LinkedList.Node current2 = head2;
         while (current1 != null || current2 != null) {
@@ -16,8 +16,6 @@ public class RemoveDupsTest {
             current1 = current1.next;
             current2 = current2.next;
         }
-
-        return true;
     }
 
 

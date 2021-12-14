@@ -22,7 +22,7 @@ public class RemoveDupsTest {
 
 
     @Test
-    @DisplayName("")
+    @DisplayName("removeDups - normal input")
     void testNormalLlist() {
         LinkedList normal = new LinkedList();
         int[] normalData = {1, 2, 2, 3, 4};
@@ -38,7 +38,7 @@ public class RemoveDupsTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("removeDups - no duplicate input")
     void testNoDuplicates() {
         LinkedList noDupes = new LinkedList();
         int[] noDupesData = {1, 2, 3, 4, 5};
@@ -53,7 +53,7 @@ public class RemoveDupsTest {
     }
 
     @Test
-    @DisplayName("")
+    @DisplayName("remove Dups - all duplicate")
     void testAllDuplicate() {
         LinkedList allDupes = new LinkedList();
         int[] allDupesData = {1, 1, 1, 1, 1};

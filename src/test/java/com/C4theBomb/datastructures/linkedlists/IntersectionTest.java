@@ -44,6 +44,7 @@ public class IntersectionTest {
         // Add more nodes to the intersection
         int[] intersectionData = { 8, 9, 10 };
         this.test2Intersect.appendMultiple(intersectionData);
+        this.test1Intersect.last = this.test2Intersect.last;
 
         assertEquals(
                 test2Intersect.head.next.next,

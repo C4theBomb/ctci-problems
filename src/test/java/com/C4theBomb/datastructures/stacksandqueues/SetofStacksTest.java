@@ -8,18 +8,31 @@ import org.junit.jupiter.api.DisplayName;
 import com.C4theBomb.datastructures.stacksandqueues.SetofStacks;
 
 public class SetofStacksTest {
+    SetofStacks stack;
+
     @BeforeEach
     void setupEach() {
-
+        this.stack = new SetofStacks(2);
+        for (int i = 0; i < 10; i++) {
+            this.stack.push(i);
+        }
     }
 
     @Test
-    @DisplayName("setOfStacks")
+    @DisplayName("setOfStacks - correct pop")
     void testNormalMin() {
+        assertEquals(9, this.stack.pop());
     }
 
     @Test
-    @DisplayName("setOfStacks - wrong min")
+    @DisplayName("setOfStacks - wrong pop")
     void testWrongMin() {
+        assertNotEquals(1, this.stack.pop());
+    }
+
+    @Test
+    @DisplayName("setOfStacks - wrong pop")
+    void testPopAt() {
+        assertNotEquals(4, this.stack.popAt(2));
     }
 }

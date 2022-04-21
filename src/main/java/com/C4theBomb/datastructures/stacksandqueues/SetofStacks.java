@@ -69,22 +69,32 @@ public class SetofStacks {
 
     SetofStacks(int stackCapacity) {
         this.stackCapacity = stackCapacity;
+        this.set = new ArrayList<>();
         this.set.add(new Stack(this.stackCapacity));
     }
 
     public void push(int item) {
-        if (this.set.get(-1).isFull()) {
+        if (this.set.get(this.set.size() - 1).isFull()) {
             set.add(new Stack(this.stackCapacity));
         }
 
-        this.set.get(-1).push(item);
+        this.set.get(this.set.size() - 1).push(item);
     }
 
     public int pop() {
-        int data = set.get(-1).pop();
+        int data = set.get(this.set.size() - 1).pop();
 
-        if (this.set.get(-1).isEmpty()) {
-            set.remove(-1);
+        if (this.set.get(this.set.size() - 1).isEmpty()) {
+            set.remove(this.set.size() - 1);
+        }
+
+        return data;
+    }
+
+    public int popAt(int stack) {
+        int data = set.get(stack).pop();
+        if (this.set.get(stack).isEmpty()) {
+            set.remove(stack);
         }
 
         return data;

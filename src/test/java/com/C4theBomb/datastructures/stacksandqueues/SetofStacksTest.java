@@ -10,7 +10,7 @@ import com.C4theBomb.datastructures.stacksandqueues.SetofStacks;
 public class SetofStacksTest {
     @BeforeEach
     void setupEach() {
-
+        
     }
 
     @Test

@@ -1,7 +1,5 @@
 package com.C4theBomb.datastructures.stacksandqueues;
 
-import java.util.EmptyStackException;
-
 import com.C4theBomb.datastructures.stacksandqueues.Stack;
 
 public class StackMin {

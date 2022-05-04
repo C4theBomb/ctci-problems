@@ -1,7 +1,5 @@
 package com.C4theBomb.datastructures.stacksandqueues;
 
-import com.C4theBomb.datastructures.stacksandqueues.Stack;
-
 public class StackMin {
     static public class StackWithMin extends Stack {
         private Stack minStack;

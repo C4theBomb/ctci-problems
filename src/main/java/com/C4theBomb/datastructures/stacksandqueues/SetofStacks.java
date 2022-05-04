@@ -2,8 +2,6 @@ package com.C4theBomb.datastructures.stacksandqueues;
 
 import java.util.ArrayList;
 
-import com.C4theBomb.datastructures.stacksandqueues.Stack;
-
 class StackStack extends Stack {
     int capacity;
     int height;

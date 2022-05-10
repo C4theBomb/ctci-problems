@@ -5,26 +5,26 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 
-public class SetofStacksTest {
-    SetofStacks stack;
+public class QueueWithStacksTest {
+    QueueWithStacks queue;
 
     @BeforeEach
     void setupEach() {
-        this.stack = new SetofStacks(2);
+        this.queue = new QueueWithStacks();
         for (int i = 0; i < 10; i++) {
-            this.stack.push(i);
+            this.queue.push(i);
         }
     }
 
     @Test
-    @DisplayName("setOfStacks - correct pop")
+    @DisplayName("queueWithStacks - correct pop")
     void testCorrectPop() {
-        assertEquals(this.stack.pop(), 9);
+        assertEquals(this.queue.pop(), 0);
     }
 
     @Test
-    @DisplayName("setOfStacks - wrong pop")
+    @DisplayName("queueWithStacks - wrong pop")
     void testWrongPop() {
-        assertNotEquals(this.stack.pop(), 5);
+        assertNotEquals(this.queue.pop(), 9);
     }
 }

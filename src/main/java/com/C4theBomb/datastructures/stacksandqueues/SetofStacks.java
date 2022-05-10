@@ -1,81 +1,47 @@
 package com.C4theBomb.datastructures.stacksandqueues;
 
 import java.util.ArrayList;
-import java.util.EmptyStackException;
 
-class Stack {
-    static public class StackNode {
-        private StackNode next;
-        int data;
-        StackNode min;
+class StackStack extends Stack {
+    int capacity;
+    int height;
 
-        public StackNode(int data) {
-            this.data = data;
-        }
-    }
-
-    private StackNode top;
-    private int capacity;
-    private int height;
-
-    public Stack(int capacity) {
+    StackStack(int capacity) {
         this.capacity = capacity;
     }
 
-    public int pop() {
-        if (this.top == null)
-            throw new EmptyStackException();
-
-        this.height--;
-
-        int item = this.top.data;
-        this.top = this.top.next;
-
-        return item;
-    }
-
-    public void push(int item) {
-        if (this.isFull()) {
-            throw new StackOverflowError();
-        }
-
+    public void push(int data) {
         this.height++;
-
-        StackNode t = new StackNode(item);
-        t.next = this.top;
-        this.top = t;
-
+        super.push(data);
     }
 
-    public int peek() {
-        if (this.top == null)
-            throw new EmptyStackException();
-
-        return this.top.data;
-    }
-
-    public boolean isEmpty() {
-        return this.top == null;
+    public int pop(int data) {
+        this.height--;
+        return super.pop();
     }
 
     public boolean isFull() {
-        return this.height >= this.capacity;
+        if (this.height >= this.capacity) {
+            return true;
+        }
+
+        return false;
     }
 }
 
 public class SetofStacks {
-    ArrayList<Stack> set;
+    ArrayList<StackStack> set;
     int stackCapacity;
 
     SetofStacks(int stackCapacity) {
         this.stackCapacity = stackCapacity;
         this.set = new ArrayList<>();
-        this.set.add(new Stack(this.stackCapacity));
+        this.set.add(new StackStack(this.stackCapacity));
     }
 
     public void push(int item) {
         if (this.set.get(this.set.size() - 1).isFull()) {
-            set.add(new Stack(this.stackCapacity));
+            set.add(new StackStack(this.stackCapacity));
         }
 
         this.set.get(this.set.size() - 1).push(item);
@@ -86,15 +52,6 @@ public class SetofStacks {
 
         if (this.set.get(this.set.size() - 1).isEmpty()) {
             set.remove(this.set.size() - 1);
-        }
-
-        return data;
-    }
-
-    public int popAt(int stack) {
-        int data = set.get(stack).pop();
-        if (this.set.get(stack).isEmpty()) {
-            set.remove(stack);
         }
 
         return data;

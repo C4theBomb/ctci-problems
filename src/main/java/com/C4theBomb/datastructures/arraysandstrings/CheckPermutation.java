@@ -3,9 +3,12 @@ package com.C4theBomb.datastructures.arraysandstrings;
 Given two strings, write a method to decide if one is a permutation of the other.
 */
 
+import java.util.Arrays;
+
 public class CheckPermutation {
     static String sort(String string) {
         char[] stringArray = string.toCharArray();
+        Arrays.sort(stringArray);
         return new String(stringArray);
     }
 
@@ -13,6 +16,8 @@ public class CheckPermutation {
     static boolean checkPermutation1(String string1, String string2) {
         if (string1.length() != string2.length())
             return false;
+        System.out.println(sort(string1));
+        System.out.println(sort(string2));
         return sort(string1).equals(sort(string2));
     }
 

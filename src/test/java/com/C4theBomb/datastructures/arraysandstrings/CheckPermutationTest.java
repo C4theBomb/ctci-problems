@@ -8,7 +8,7 @@ public class CheckPermutationTest {
     @Test
     @DisplayName("CheckPermutation1 - True input")
     void trueCheckPermutation1() {
-        assertTrue(CheckPermutation.checkPermutation1("abcdefg", "gefdcba"));
+        assertTrue(CheckPermutation.checkPermutation1("abcdefg", "gfedcba"));
     }
 
     @Test

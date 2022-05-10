@@ -1,7 +1,5 @@
 package com.C4theBomb.datastructures.stacksandqueues;
 
-import java.util.NoSuchElementException;
-
 class Pet {
     String name, type;
 

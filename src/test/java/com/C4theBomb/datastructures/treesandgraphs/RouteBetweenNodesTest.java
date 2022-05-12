@@ -41,7 +41,6 @@ public class RouteBetweenNodesTest {
     @Test
     @DisplayName("routeBetweenNodes - route between nodes")
     public void routeFound() {
-        System.out.println(this.nodes.get("A").toString());
         assertTrue(RouteBetweenNodes.checkRoute(this.nodes.get("A"), this.nodes.get("I")));
     }
 

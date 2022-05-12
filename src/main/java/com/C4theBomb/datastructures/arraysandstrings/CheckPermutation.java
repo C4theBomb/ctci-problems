@@ -16,8 +16,6 @@ public class CheckPermutation {
     static boolean checkPermutation1(String string1, String string2) {
         if (string1.length() != string2.length())
             return false;
-        System.out.println(sort(string1));
-        System.out.println(sort(string2));
         return sort(string1).equals(sort(string2));
     }
 

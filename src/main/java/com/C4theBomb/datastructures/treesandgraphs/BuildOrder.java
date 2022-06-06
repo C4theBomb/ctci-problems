@@ -3,6 +3,7 @@ package com.C4theBomb.datastructures.treesandgraphs;
 import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.Iterator;
 
 public class BuildOrder {
     static class Dependency {
@@ -14,33 +15,48 @@ public class BuildOrder {
         }
     }
 
-    private static HashMap<String, ArrayList<String>> buildAjdList(ArrayList<Dependency> deps) {
+    private static HashMap<String, ArrayList<String>> buildAjdList(String[] projects, ArrayList<Dependency> deps) {
         HashMap<String, ArrayList<String>> depsList = new HashMap<>();
 
+        for (String project : projects) {
+            depsList.put(project, new ArrayList<String>());
+        }
+
         for (Dependency dep : deps) {
-            depsList.putIfAbsent(dep.prj, new ArrayList<String>());
             depsList.get(dep.prj).add(dep.dep);
         }
 
         return depsList;
     }
 
-    public static LinkedList<String> getBuildOrder(ArrayList<Dependency> deps) {
-        HashMap<String, ArrayList<String>> adjList = BuildOrder.buildAjdList(deps);
+    public static LinkedList<String> getBuildOrder(String[] projects, ArrayList<Dependency> deps) {
+        HashMap<String, ArrayList<String>> adjList = BuildOrder.buildAjdList(projects, deps);
         LinkedList<String> order = new LinkedList<>();
+        Iterator<String> iter = adjList.keySet().iterator();
 
-        while ajdList not empty {
-            for key in ajdList keys {
+        while (iter.hasNext()) {
+            String key = iter.next();
+            ArrayList<String> value = adjList.get(key);
 
-                if (key.value.length == 0) {
-                    for key in ajdList keys {
-                        pop key from key.value
-                    }
-                    remove key and add to buildOrder
+            if (value.size() == 0) {
+                order.add(key);
+
+                System.out.println(adjList);
+                System.out.println(order);
+                for (ArrayList<String> keyValue : adjList.values()) {
+                    keyValue.remove(key);
                 }
+
+                iter.remove();
+
+                if (order.size() == projects.length) {
+                    return order;
+                }
+
+                iter = adjList.keySet().iterator();
             }
         }
 
-        return order;
+        return null;
     }
 }

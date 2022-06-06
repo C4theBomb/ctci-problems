@@ -24,8 +24,9 @@ public class BuildOrderTest {
         input.add(new Dependency("e", "b"));
         input.add(new Dependency("g", "d"));
 
-        String[] expected = { "f", "d", "c", "b", "g", "a", "e" };
-        LinkedList<String> recieved = BuildOrder.getBuildOrder(input);
+        String[] projects = { "a", "b", "c", "d", "e", "f", "g" };
+        String[] expected = { "d", "f", "b", "c", "a", "e", "g" };
+        LinkedList<String> recieved = BuildOrder.getBuildOrder(projects, input);
         for (int i = 0; i < expected.length; i++) {
             assertEquals(expected[i], recieved.get(i));
         }
@@ -44,7 +45,8 @@ public class BuildOrderTest {
         input.add(new Dependency("e", "b"));
         input.add(new Dependency("a", "d"));
 
-        assertNull(BuildOrder.getBuildOrder(input));
+        String[] projects = { "a", "b", "c", "d", "e", "f", "g" };
+        assertNull(BuildOrder.getBuildOrder(projects, input));
     }
 
 }
